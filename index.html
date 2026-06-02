@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#27644b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="历史复习">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>初一历史复习训练台</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/icon-192.png">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">七年级中国历史 · 上下册</p>
+          <h1>历史复习训练台</h1>
+        </div>
+        <div class="topbar__meta" id="progressSummary">正在加载学习进度...</div>
+      </header>
+
+      <nav class="view-tabs" aria-label="主要功能">
+        <button class="tab is-active" data-view="dashboard">今日复习</button>
+        <button class="tab" data-view="calendar">复习日历</button>
+        <button class="tab" data-view="challenge">单元闯关</button>
+        <button class="tab" data-view="map">教材地图</button>
+        <button class="tab" data-view="training">训练场</button>
+        <button class="tab" data-view="writing">书写训练</button>
+        <button class="tab" data-view="wrongbook">错题本</button>
+        <button class="tab" data-view="mastery">掌握度</button>
+      </nav>
+
+      <main class="workspace">
+        <aside class="lesson-rail" id="lessonRail" aria-label="教材目录"></aside>
+        <section class="content-stage">
+          <section class="view-panel is-visible" id="view-dashboard"></section>
+          <section class="view-panel" id="view-calendar"></section>
+          <section class="view-panel" id="view-challenge"></section>
+          <section class="view-panel" id="view-map"></section>
+          <section class="view-panel" id="view-training"></section>
+          <section class="view-panel" id="view-writing"></section>
+          <section class="view-panel" id="view-wrongbook"></section>
+          <section class="view-panel" id="view-mastery"></section>
+        </section>
+      </main>
+    </div>
+
+    <script src="./data/historyData.js"></script>
+    <script src="./data/enrichment.js"></script>
+    <script src="./data/examPack.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
