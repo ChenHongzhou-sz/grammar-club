@@ -1,0 +1,16 @@
+{
+  "name": "语法俱乐部",
+  "short_name": "语法俱乐部",
+  "description": "移动端英语语法学习与练习 Web App",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f5f7",
+  "theme_color": "#f5f5f7",
+  "icons": [
+    {
+      "src": "./assets/cover.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
