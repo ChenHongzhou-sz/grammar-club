@@ -4,6 +4,8 @@ pageClass: contents_class
 
 # 目录
 
+<StudyDashboard />
+
 ### &nbsp;
 
 - ### [序：我学英语的经验](Preface.md)

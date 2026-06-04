@@ -1,4 +1,14 @@
+const isGithub = process.env.GITHUB == 'github';
+const base = isGithub ? '/grammar-club/' : '/';
+
 module.exports = {
+  head: [
+    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,viewport-fit=cover' }],
+    ['meta', { name: 'theme-color', content: '#f5f5f7' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }],
+    ['link', { rel: 'manifest', href: base + 'manifest.webmanifest' }]
+  ],
   plugins: [
     [
       'google-analytics-4',
@@ -7,11 +17,11 @@ module.exports = {
       }
     ]
   ],
-  base: process.env.GITHUB == 'github' ? '/grammar-club/' : '/',
-  dest: process.env.GITHUB == 'github' ? 'docs/.vuepress/github' : 'docs/.vuepress/dist',
+  base: base,
+  dest: isGithub ? 'docs/.vuepress/github' : 'docs/.vuepress/dist',
   title: '语法俱乐部',
   themeConfig: {
-    repo: 'llwslc/grammar-club',
+    repo: 'ChenHongzhou-sz/grammar-club',
     displayAllHeaders: true,
     smoothScroll: true,
     sidebar: {
@@ -48,6 +58,11 @@ module.exports = {
         }
       ]
     },
-    nav: [{ text: '目录', link: '/content/Preface' }]
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '目录', link: '/content/Contents' },
+      { text: '开始', link: '/content/Chapter01' }
+    ],
+    lastUpdated: '最后更新'
   }
 };

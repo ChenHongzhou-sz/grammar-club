@@ -3,10 +3,12 @@ home: true
 heroImage: /cover.png
 heroText: 语法俱乐部
 tagline: 旋元佑
-actionText: 开始学习 →
+actionText: 进入学习 →
 actionLink: /content/Preface
 footer: 感谢
 ---
+
+<StudyDashboard />
 
 <p class="home_author">旋元佑</p>
 
